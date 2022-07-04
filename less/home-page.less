@@ -1,0 +1,115 @@
+// Contenido del Home
+
+.home {
+
+    .intro {
+  
+      h2 {
+        padding: 15px; //relleno
+      }
+  
+      p {
+        padding: 15px;
+      }
+      // IMAGEEEEN
+      img{
+        // border-radius: 20px; 
+        .imgBorder();// esto lo llamo del mixins.less que es equiavalente a lo que esta escrito en la parte comentada
+      
+        @media @phone{
+        width: 100%;
+      }
+      }
+    }
+  
+    .music-images {
+        // estas 3 lineas son para dejar las 3 imagenes pegadas
+            display: flex; //pantalla flexible
+            flex-wrap: wrap; //envoltura flexible
+            width: 100%; //ancho
+            img {        
+        //esto es para separar las imagenes ponerle borde en forma de radio y acomodarlas
+              width: 28%;
+              margin: 20px 2.5%;
+              border-radius: 20px;
+              height: 100%;
+            }
+                /* OCULTO 2 DE LAS 3 IMAGENES EN FORMATO MOBILE */
+            .tecnologia, .ondas{
+                @media @phone{
+                  display: none;
+                }
+            }
+                /* LA UNICA IMAGEN QUE QUIERO QUE SE VEA QUIERO QUE OCUPE EL 100% */
+
+                  .auricular {
+                    @media @phone {
+                      width: 100%;
+                }
+              }
+          
+          }
+          .musica-nueva{
+              padding: 15px; //el padding es el relleno
+              h3 {
+                margin-top: 11px; //margen superior
+              }
+              p {
+                margin-top: 13px;
+              }
+          }
+          .actual{
+              margin-top: 60px;
+              border-top: 1px solid @main-border-color; //esto es para crear una linea horizontal en la pantalla
+              padding: 50px;
+              display: flex;
+              justify-content: center;
+          }
+           @media @phone{
+            .flex(column-reverse);
+            padding: 15px;
+          }
+            .actual-text{
+                width: 50%;
+                h3 {
+                    margin-bottom: 10px; //margen inferior
+                  }
+            
+                  p {
+                    margin-bottom: 26px;
+                  }
+            .btn{
+                .myBtn(@btn-bg-color, @wild-sand); //llama a la clase myBtn creada en mixins.less
+           @media @phone{
+          width: 100%;
+          text-align: center;
+            }
+        }
+    }
+        .actual-img {
+            width: 46%;
+            margin-left: 4%;
+            
+            @media @phone{
+              width: 90%;
+       }
+            img {
+              width: 100%;
+              height: auto;
+              border-radius: 10px;
+            }
+          }
+      }
+      .algo{ 
+          display: flex;
+          justify-content: center;
+      .card{
+          img{
+              display: flex;
+            justify-content: ;
+            width: 30%;
+            
+          }
+
+  }
+}

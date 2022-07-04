@@ -1,0 +1,30 @@
+// Código de Nav acá
+nav{
+    
+    //estas 3 lineas siguientes son para alinear los textos del nav, es decir que ya no se vean en forma vertical
+    // display: flex;
+    // flex-direction: : column;
+    // align-items: center;
+  .flex(column);// con esto estoy llamando al mixins.less que equivalente a escribir lo que esta comentado arriba
+// esto es para poner el color del nav en 
+    background-color: @nav-bg;
+    border: @nav-border solid 2px;
+    padding-top: 10px;//para mover el titulo 10 px con respecto a la parte superior
+    ul{
+        // display:flex;
+        // justify-content: space-around;
+        .flex(@justify: space-around);
+        // width: 50%;
+        // padding: 10px;
+
+        @media @phone{ // esto es para editar el texto para cuando tenemos una pantalla chiquta
+            width: 90%;
+        }
+}
+a{ //esta a correstonde a cada uno de los link de navegacion
+
+    text-decoration: none; //para sacar el subrayado
+    color: @nav-font;
+    font-weight: bold; //esto hace mas gorditas las letras
+}
+}
